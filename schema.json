@@ -1,0 +1,28 @@
+{
+	"git_repos": {
+		"name": {
+			"type": "text", 
+			"nullable": false
+		}, 
+		"commit_date": {
+			"type": "text", 
+			"nullable": false
+		},
+		"remotes": {
+			"default": "NULL", 
+			"type": "text"
+		},
+		"last_commit": {
+			"default": "NULL", 
+			"type": "text"
+		},
+		"date": {
+			"type": "text", 
+			"nullable": false
+		},
+		"path": {
+			"type": "text", 
+			"nullable": false
+		}
+	}
+}
