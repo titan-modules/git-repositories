@@ -23,6 +23,7 @@ from titantools.system import execute_command
 from time import time, gmtime, strftime
 from os.path import dirname,basename,isfile
 from os import chmod
+from titantools.decorators import run_every_60
 
 # Set Logging Status
 logging_enabled = False
@@ -30,6 +31,7 @@ logging_enabled = False
 # Set datastore directory
 DATASTORE = argv[1]
 
+@run_every_60
 class AnalyzeGitCheckouts(object):
     """ AnalyzeGitCheckouts """
 
@@ -104,7 +106,7 @@ class AnalyzeGitCheckouts(object):
             ORM.initialize_table(k, v)
 
         data_science = DataScience(ORM, self.datastore, "git_repos")
-        data_science.get_all()
+        #data_science.get_all()
 
 if __name__ == "__main__":
 
