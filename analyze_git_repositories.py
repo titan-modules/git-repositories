@@ -106,7 +106,7 @@ class AnalyzeGitCheckouts(object):
             ORM.initialize_table(k, v)
 
         data_science = DataScience(ORM, self.datastore, "git_repos")
-        #data_science.get_all()
+        data_science.get_all()
 
 if __name__ == "__main__":
 
